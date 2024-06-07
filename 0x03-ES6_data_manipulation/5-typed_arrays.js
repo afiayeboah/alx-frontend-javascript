@@ -6,6 +6,11 @@
  * @returns {boolean} - Returns true if the set contains all elements
  * in the array, otherwise false.
  */
-export default function hasValuesFromArray(set, array) {
-  return array.every((value) => set.has(value));
+export default function createInt8TypedArray(length, position, value) {
+  if (position >= length) {
+    throw new Error('Position outside range');
+  }
+  const buf = new DataView(new ArrayBuffer(length), 0, length);
+  buf.setInt8(position, value);
+  return buf;
 }

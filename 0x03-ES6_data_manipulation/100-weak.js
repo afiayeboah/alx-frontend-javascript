@@ -15,7 +15,7 @@ const MAX_ENDPOINT_CALLS = 5;
  * Throws an error if the maximum number of calls is exceeded.
  * 
  * @param {Object} endpoint - The endpoint to make a request to.
- * @param {string} endpoint.protocol - The protocol of the endpoint (e.g., 'http', 'https').
+ * @param {string} endpoint.protocol - The protocol of the endpoint.
  * @param {string} endpoint.name - The name of the endpoint.
  * 
  * @throws {Error} If the number of calls exceeds the maximum allowed.
